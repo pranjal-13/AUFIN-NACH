@@ -14,7 +14,7 @@ Feature: To test create outward mandate functionality
     Examples: 
       | Name        | Account_Number | Amount | Customer_Name | Customer_Code      | IFSC_Code   | Image1        | Image2        | Customer_Code      |
       | David Green | 9239892282761  |  2500  | Bajaj Finance | HDFC00053000002841 | SBIN0004343 | CREATE_01.jpg | CREATE_01.tif | HDFC00053000002841 |
-    #  | Shankar R   | 9239893322744  |  1300  | Bajaj Finance | HDFC00053000002841 | SBIN0004343 | CREATE_01.jpg | CREATE_01.tif | HDFC00053000002841 |
+      | Shankar R   | 9239892345664  |  3500  | Bajaj Finance | HDFC00053000002841 | SBIN0004343 | CREATE_01.jpg | CREATE_01.tif | HDFC00053000002841 |
       
      #@TC_09_02_CreateOutwardMandateNegativeScenario
      #Scenario: Validation of Create Outward Mandate Fields
