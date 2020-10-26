@@ -1,0 +1,48 @@
+package com.aufin.qa.pages;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import com.aufin.qa.base.TestBase;
+
+public class xmlFileReader2 extends TestBase {
+
+	public static Map<String, String> mapTitle = new HashMap<String, String>();;
+
+
+	public void fileReader() throws ParserConfigurationException {
+		try {
+		File fXmlFile = new File("D:\\Selenium\\AUFIN-NACH\\src\\main\\java\\com\\Aufin\\qa\\config\\Mandatemodule.xml");
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        Document doc = dBuilder.parse(fXmlFile);
+        doc.getDocumentElement().normalize();
+        NodeList nList = doc.getElementsByTagName("init-param");
+        
+        for (int temp = 0; temp < nList.getLength(); temp++) {
+    		Node nNode = nList.item(temp);
+    		System.out.println("\nCurrent Element :" + nNode.getNodeName());			
+    		if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+    			Element eElement = (Element) nNode;
+    			System.out.println("Key : " + eElement.getElementsByTagName("param-name").item(0).getTextContent());
+    			System.out.println("Value : " + eElement.getElementsByTagName("param-value").item(0).getTextContent());
+    			mapTitle.put(eElement.getElementsByTagName("param-name").item(0).getTextContent(), eElement.getElementsByTagName("param-value").item(0).getTextContent());
+		}
+        }
+		}
+		catch (Exception e) 
+	      {
+	         e.printStackTrace();
+	      }
+		}
+		}

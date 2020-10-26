@@ -1,0 +1,35 @@
+package com.aufin.qa.constants;
+
+public interface IntfConstants {
+	
+	long TIMEOUT = 3000;
+	long SHORT_TIMEOUT = 3000;
+	long LONG_TIMEOUT = 5000;
+	
+//	String year="2026";
+	
+	String CONFIGPROPERTIES_PATH="E:\\workspace\\DEFAULT_WORKSPACE\\AUFIN-NACH\\src\\main\\java\\com\\aufin\\qa\\config\\config.properties";
+				
+	String USER_NAME="admin1";
+	String CLEARING_TYPE="NEFT";
+	String NEFT_CERTIFICATE_PATH="D:\\CACIB\\CERTIFICATE_JKS\\CERTIFICATE_JKS\\NEFT\\CRLYSFMS.jks";
+	String KEYSTORE_PASSPHRASE="PASSWORD@123";
+	String CERTIFICATE_ALIAS="PASSWORD@123";
+	String ALIAS_PASSPHRASE="p@ssw0rd";
+	String ACTIVE_TYPE="Y";
+	
+	String CLEARING_TYPE1="NACH";
+	String NACH_CERTIFICATE_PATH="D:\\CACIB\\CERTIFICATE_JKS\\CERTIFICATE_JKS\\NACH\\NACH_PROD_SIGN_2018.jks";
+	String KEYSTORE_PASSPHRASE1="pfxfile123";
+	String CERTIFICATE_ALIAS1="montran";
+	String ALIAS_PASSPHRASE1="pfxfile123";
+
+	String CLEARING_TYPE2="RTGS";
+	String RTGS_CERTIFICATE_PATH="D:\\CACIB\\CERTIFICATE_JKS\\CERTIFICATE_JKS\\RTGS\\RTGS_CER.jks";
+	
+	String SELECT_LOAD_TYPE="IFSC";
+	String SELECT_FORCEUPDATE_TYPE="Y";
+	String IFSC_LIST_FILE_PATH="D:\\CACIB\\IFSC\\NEFT.xlsx";
+		
+			
+}
